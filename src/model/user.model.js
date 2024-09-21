@@ -55,7 +55,17 @@ const userSchema = new Schema(
     Otp:{
         type: Number,
     },
-    
+    role: {
+        type : String,
+        enum : ["admin", "user", "merchent"],
+        default : "user"
+    },
+    refreshToke : {
+        type : string
+    },
+    avatar:{
+        type: string
+    }
     },
 
     { timestamps: true }
